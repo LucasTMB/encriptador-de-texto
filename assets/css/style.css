@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Cabeçalho*/
+
+header {
+    margin-bottom: 30px;
+}
+
+.logo-alura {
+    padding: 3px 0;
+}
+
+/*Corpo*/
+
+body {
+    background: #ced3e6;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Conteúdo principal*/
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/*Área com a entrada do texto em que deseja criptografar ou descriptografar*/
+
+.entrada {
+    width: 55%;
+}
+
+.digite-texto {
+    width: 100%;
+}
+
+.digite-texto textarea {
+    border: none;
+    background: none;
+    width: 100%;
+    font-size: 28px;
+    color: #0A3871;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.digite-texto textarea:focus {
+    border: 0 none;
+    outline: 0;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+/*Área do resultado da encriptação*/
+
+.saida {
+    width: 40%;
+}
+
+.conteudo-resultado-vazio {
+    background: #fefefe;
+    text-align: center;
+    width: 80%;
+    padding: 93px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.conteudo-resultado-ok {
+    text-align: center;
+    background: #fefefe;
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.conteudo-resultado-ok textarea {
+    border: none;
+    background: none;
+    width: 100%;
+    font-size: 20px;
+    color: #0A3871;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.conteudo-resultado-ok textarea:focus {
+    outline: 0;
+}
+
+/*Botões*/
+
+.cripto, .descripto, .copiar {
+    padding: 15px;
+    width: 200px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cripto, .copiar {
+    background: #0A3871;
+    color: white;
+}
+
+.cripto:hover, .descripto:hover, .copiar:hover {
+    transform: scale(1.1);
+}
+
+.descripto {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+/*Rodapé*/
+
+footer {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+.redes-sociais {
+    text-decoration: none;
+    margin: 5px;
+    color: #0A3871;
+}
+
+.linkedin:hover, .github:hover {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+/*Responsividade em celulares*/
+
+@media screen and (max-width: 480px) {
+    .container, .entrada, .saida {
+        width: 100%;
+    }
+
+    .container, .botoes {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cripto, .descripto {
+        margin: 5px 0;
+        width: auto;
+    }
+
+    .digite-texto textarea {
+        height: 350px;
+    }
+
+    .cripto:hover, .descripto:hover, .copiar:hover {
+        transform: scale(1.0);
+    }
+
+    #img {
+        display: none;
+    }
+
+    .conteudo-resultado-vazio {
+        margin-top: 5px;
+        padding: 30px 0px;
+        width: auto;
+    }
+
+    .conteudo-resultado-ok {
+        margin-top: 5px;
+        width: auto;
+    }
+
+    .conteudo-resultado-ok textarea {
+        height: 100px;
+    }
+
+}
+
+/*Responsividade no navegaador*/
+
+@media screen and (min-width: 481px) and (max-width: 1199px) {
+    .container, .entrada, .saida {
+        width: auto;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cripto, .descripto {
+        margin: 5px 0;
+        width: auto;
+    }
+
+    .digite-texto textarea {
+        height: 250px;
+    }
+
+    .cripto:hover, .descripto:hover, .copiar:hover {
+        transform: scale(1.0);
+    }
+
+    #img {
+        display: none;
+    }
+
+    .conteudo-resultado-vazio {
+        margin-top: 10px;
+        padding: 30px 0px;
+        width: auto;
+    }
+
+    .conteudo-resultado-ok {
+        margin-top: 10px;
+        width: auto;
+    }
+
+    .conteudo-resultado-ok textarea {
+        height: 100px;
+    }
+
+
+}
